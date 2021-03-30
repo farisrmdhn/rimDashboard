@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteCond %{REQUEST-FILENAME} !-f
+RewriteCond %{REQUEST-FILENAME} !-d
+
+RewriteCond $1 !^(index\.php|assets|build|vendors|third_party|application)
+
+RewriteRule ^([A-Za-z0-9_/.-]+)$ index.php?/welcome/$1
